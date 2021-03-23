@@ -57,12 +57,10 @@ const titleRating = tvShows.map((tvShows) => {
 
 console.log(titleRating);
 
-const titleMap = tvShows.map((tvShows) => {
-  if (tvShows.rating >= 9) {
-    return tvShows.title.toUpperCase();
-  } else {
-    return tvShows.title.toLowerCase();
-  }
-});
+const titleMap = tvShows.map((tvShows) =>
+  tvShows.rating >= 9
+    ? tvShows.title.toUpperCase()
+    : tvShows.title.toLowerCase()
+);
 
 console.log(titleMap);
